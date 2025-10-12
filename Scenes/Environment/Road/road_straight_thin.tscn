@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bihct82fdcwt3"]
+
+[ext_resource type="Texture2D" uid="uid://d4m748861x57i" path="res://Assets/Road_02/Road_02_Tile_07/Road_01_Tile_07.png" id="1_6rx72"]
+
+[node name="roadStraightThin" type="Node2D"]
+
+[node name="Road" type="Sprite2D" parent="."]
+texture = ExtResource("1_6rx72")
