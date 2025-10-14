@@ -1,8 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://c2f4ivgp57jsu"]
+[gd_scene load_steps=3 format=3 uid="uid://c2f4ivgp57jsu"]
 
 [ext_resource type="Texture2D" uid="uid://htaugr3wl154" path="res://Assets/Road_02/Road_02_Tile_03/Road_02_Tile_03.png" id="1_0th1t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0th1t"]
+size = Vector2(512, 50)
 
 [node name="roadStraightA" type="Node2D"]
 
 [node name="Road" type="Sprite2D" parent="."]
 texture = ExtResource("1_0th1t")
+
+[node name="Wall" type="StaticBody2D" parent="."]
+position = Vector2(0, -270)
+
+[node name="Collision" type="CollisionShape2D" parent="Wall"]
+shape = SubResource("RectangleShape2D_0th1t")
+
+[node name="Wall2" type="StaticBody2D" parent="."]
+position = Vector2(0, 270)
+
+[node name="Collision" type="CollisionShape2D" parent="Wall2"]
+shape = SubResource("RectangleShape2D_0th1t")

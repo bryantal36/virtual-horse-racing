@@ -1,5 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://r8dxv77qktwv"]
 
+[ext_resource type="PackedScene" uid="uid://c4865ced8lmhg" path="res://Horses/horse.tscn" id="1_ehmlo"]
 [ext_resource type="PackedScene" uid="uid://bfloro2vrs0bt" path="res://Scenes/Environment/background.tscn" id="1_oder3"]
 [ext_resource type="PackedScene" uid="uid://c2f4ivgp57jsu" path="res://Scenes/Environment/Road/road_straight_a.tscn" id="2_wjs4o"]
 [ext_resource type="PackedScene" uid="uid://n6r3se0o30h5" path="res://Scenes/Environment/Road/road_zig_zag.tscn" id="3_mc1i1"]
@@ -7,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://cd5ksrx3ygg6m" path="res://Scenes/Environment/Road/road_straight_b.tscn" id="4_8rkvs"]
 [ext_resource type="PackedScene" uid="uid://bihct82fdcwt3" path="res://Scenes/Environment/Road/road_straight_thin.tscn" id="5_xnfqo"]
 [ext_resource type="PackedScene" uid="uid://byr0ffl5nrruy" path="res://Scenes/Environment/Road/road_corner_b.tscn" id="6_qs7lm"]
-[ext_resource type="PackedScene" uid="uid://b0ldna2d37pyk" path="res://Scenes/horse_node.tscn" id="8_wjs4o"]
 
 [node name="MainScene" type="Node2D"]
 
@@ -130,8 +130,8 @@ position = Vector2(-103, 111)
 rotation = 4.712389
 scale = Vector2(0.125, 0.125)
 
+[node name="Horse" parent="." instance=ExtResource("1_ehmlo")]
+position = Vector2(-193, -97)
+
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
-
-[node name="HorseNode" parent="." instance=ExtResource("8_wjs4o")]
-position = Vector2(-196, -135)

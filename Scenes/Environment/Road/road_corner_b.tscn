@@ -1,8 +1,72 @@
-[gd_scene load_steps=2 format=3 uid="uid://byr0ffl5nrruy"]
+[gd_scene load_steps=5 format=3 uid="uid://byr0ffl5nrruy"]
 
 [ext_resource type="Texture2D" uid="uid://cxvjms4huu4yc" path="res://Assets/Road_02/Road_02_Tile_02/Road_02_Tile_02.png" id="1_htq5b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_htq5b"]
+size = Vector2(240, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_64u62"]
+size = Vector2(120, 50)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xv7pa"]
+radius = 50.0
 
 [node name="roadCornerB" type="Node2D"]
 
 [node name="Road" type="Sprite2D" parent="."]
 texture = ExtResource("1_htq5b")
+
+[node name="Wall" type="StaticBody2D" parent="."]
+position = Vector2(-208.00002, -76)
+rotation = 2.9321532
+
+[node name="Collision" type="CollisionShape2D" parent="Wall"]
+position = Vector2(-414.03464, 81.7028)
+shape = SubResource("RectangleShape2D_htq5b")
+
+[node name="Wall2" type="StaticBody2D" parent="."]
+position = Vector2(179, 236)
+rotation = 1.727876
+
+[node name="Collision" type="CollisionShape2D" parent="Wall2"]
+position = Vector2(9.355146, 429.8284)
+shape = SubResource("RectangleShape2D_htq5b")
+
+[node name="Wall3" type="StaticBody2D" parent="."]
+position = Vector2(0.9999924, 181)
+rotation = 2.146755
+
+[node name="Collision" type="CollisionShape2D" parent="Wall3"]
+position = Vector2(-38.34076, 258.602)
+shape = SubResource("RectangleShape2D_64u62")
+
+[node name="Wall4" type="StaticBody2D" parent="."]
+position = Vector2(-95, 102.00001)
+rotation = 2.3561945
+
+[node name="Collision" type="CollisionShape2D" parent="Wall4"]
+position = Vector2(-118.08684, 150.61375)
+shape = SubResource("RectangleShape2D_64u62")
+
+[node name="Wall5" type="StaticBody2D" parent="."]
+position = Vector2(-175, 9)
+rotation = 2.5132742
+
+[node name="Collision" type="CollisionShape2D" parent="Wall5"]
+position = Vector2(-225.39053, 55.028248)
+shape = SubResource("RectangleShape2D_64u62")
+
+[node name="Wall6" type="StaticBody2D" parent="."]
+position = Vector2(-218.00002, -57.000008)
+rotation = 2.7576203
+
+[node name="Collision" type="CollisionShape2D" parent="Wall6"]
+position = Vector2(-302.09134, 42.963036)
+shape = SubResource("RectangleShape2D_64u62")
+
+[node name="Wall7" type="StaticBody2D" parent="."]
+position = Vector2(304, 298)
+
+[node name="Collision" type="CollisionShape2D" parent="Wall7"]
+position = Vector2(-2, 2)
+shape = SubResource("CircleShape2D_xv7pa")

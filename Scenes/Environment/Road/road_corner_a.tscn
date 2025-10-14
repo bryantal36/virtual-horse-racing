@@ -1,8 +1,67 @@
-[gd_scene load_steps=2 format=3 uid="uid://cn7o6nn5a86f7"]
+[gd_scene load_steps=5 format=3 uid="uid://cn7o6nn5a86f7"]
 
 [ext_resource type="Texture2D" uid="uid://bq7n8gk3wfcyv" path="res://Assets/Road_02/Road_02_Tile_01/Road_02_Tile_01.png" id="1_egrku"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_egrku"]
+size = Vector2(240, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wnndj"]
+size = Vector2(120, 50)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0gxey"]
+radius = 50.0
 
 [node name="roadCornerA" type="Node2D"]
 
 [node name="Road" type="Sprite2D" parent="."]
 texture = ExtResource("1_egrku")
+
+[node name="Wall" type="StaticBody2D" parent="."]
+position = Vector2(-208.00002, -76)
+rotation = 1.3613569
+
+[node name="Collision" type="CollisionShape2D" parent="Wall"]
+position = Vector2(-110.1774, 18.813316)
+shape = SubResource("RectangleShape2D_egrku")
+
+[node name="Wall2" type="StaticBody2D" parent="."]
+position = Vector2(179, 236)
+rotation = 0.15707964
+
+[node name="Collision" type="CollisionShape2D" parent="Wall2"]
+shape = SubResource("RectangleShape2D_egrku")
+
+[node name="Wall3" type="StaticBody2D" parent="."]
+position = Vector2(0.9999924, 181)
+rotation = 0.57595867
+
+[node name="Collision" type="CollisionShape2D" parent="Wall3"]
+shape = SubResource("RectangleShape2D_wnndj")
+
+[node name="Wall4" type="StaticBody2D" parent="."]
+position = Vector2(-95, 102.00001)
+rotation = 0.7853982
+
+[node name="Collision" type="CollisionShape2D" parent="Wall4"]
+shape = SubResource("RectangleShape2D_wnndj")
+
+[node name="Wall5" type="StaticBody2D" parent="."]
+position = Vector2(-175, 9)
+rotation = 0.9424778
+
+[node name="Collision" type="CollisionShape2D" parent="Wall5"]
+shape = SubResource("RectangleShape2D_wnndj")
+
+[node name="Wall6" type="StaticBody2D" parent="."]
+position = Vector2(-218.00002, -57.000008)
+rotation = 1.1868238
+
+[node name="Collision" type="CollisionShape2D" parent="Wall6"]
+shape = SubResource("RectangleShape2D_wnndj")
+
+[node name="Wall7" type="StaticBody2D" parent="."]
+position = Vector2(303, -303)
+
+[node name="Collision" type="CollisionShape2D" parent="Wall7"]
+position = Vector2(-2, 2)
+shape = SubResource("CircleShape2D_0gxey")
