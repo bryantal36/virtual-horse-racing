@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvgton8l0gt0v"]
+
+[ext_resource type="Script" uid="uid://b78rcodjychc1" path="res://Scripts/Controls/wall_movement.gd" id="1_jhdkb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v07jv"]
+size = Vector2(20, 160)
+
+[node name="InvisibleWall" type="Node2D"]
+script = ExtResource("1_jhdkb")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_v07jv")

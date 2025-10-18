@@ -2,10 +2,12 @@ extends CharacterBody2D
 
 @onready var horse_sprite: AnimatedSprite2D = $"HorseSprite"
 
-var horse_speed = 150
+var horse_speed = 110
 
 func _init() -> void:
+	var random_y_vector = randf_range(-1, 1)
 	velocity = Vector2.RIGHT
+	velocity.y = random_y_vector
 
 func _physics_process(delta: float) -> void:
 	var collision = move_and_collide(velocity * delta * horse_speed)
@@ -24,11 +26,11 @@ func _physics_process(delta: float) -> void:
 	
 	
 	if velocity.length() > 0:
-		if abs(velocity.y) <= abs(velocity.x):
+		if abs(velocity.y) <= velocity.x:
 			horse_sprite.play("gallop_right")
-		if abs(velocity.y)*-1 >= velocity.x && horse_sprite.animation != "gallop_left":
+		if abs(velocity.y)*-1 >= velocity.x:
 			horse_sprite.play("gallop_left")
-		if abs(velocity.y) > abs(velocity.x):
+		if velocity.y > abs(velocity.x):
 			horse_sprite.play("gallop_down")
 		if velocity.y < abs(velocity.x)*-1:
 			horse_sprite.play("gallop_up")
