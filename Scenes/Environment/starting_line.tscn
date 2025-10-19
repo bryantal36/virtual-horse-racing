@@ -15,7 +15,10 @@ texture = ExtResource("1_4u1lg")
 
 [node name="CheckeredLine" type="Area2D" parent="."]
 script = ExtResource("1_81acu")
+lap = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CheckeredLine"]
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_4u1lg")
+
+[connection signal="body_entered" from="CheckeredLine" to="CheckeredLine" method="_on_body_entered"]
