@@ -4,4 +4,4 @@ extends Area2D
 
 func _on_body_entered(body):
 	if body.name == "HorseBody":
-		GlobalManager.add_lap()
+		GlobalManager.end_race()

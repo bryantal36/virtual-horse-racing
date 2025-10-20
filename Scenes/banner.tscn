@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://3a3fj4vik2fi"]
+
+[ext_resource type="Texture2D" uid="uid://3wvhal4nijgt" path="res://Assets/Custom/Banner2.png" id="1_vmspm"]
+
+[node name="Banner" type="Node2D"]
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_vmspm")
