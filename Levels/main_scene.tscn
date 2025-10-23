@@ -209,6 +209,14 @@ rotation = 4.712389
 position = Vector2(-81, -179)
 rotation = 1.5707964
 
+[node name="InvisibleWall12" parent="InvisibleWalls" instance=ExtResource("11_qs7lm")]
+position = Vector2(-154, 122)
+rotation = 3.1415927
+
+[node name="InvisibleWall13" parent="InvisibleWalls" instance=ExtResource("11_qs7lm")]
+position = Vector2(-364, 119)
+rotation = 6.2831855
+
 [node name="Banner" parent="InvisibleWalls" instance=ExtResource("12_qs7lm")]
 position = Vector2(-8, 300)
 scale = Vector2(2, 2)

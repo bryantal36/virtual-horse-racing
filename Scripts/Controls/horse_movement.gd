@@ -3,6 +3,7 @@ extends CharacterBody2D
 @onready var horse_sprite: AnimatedSprite2D = $"HorseSprite"
 
 var horse_speed = 110
+var is_moving: bool = true
 
 func _init() -> void:
 	var random_y_vector = randf_range(-1, 1)
@@ -19,10 +20,13 @@ func _init() -> void:
 	modulate.b = blue
 
 func _physics_process(delta: float) -> void:
-	var collision = move_and_collide(velocity * delta * horse_speed)
-	if collision:
-		var normal = collision.get_normal()
-		velocity = velocity.bounce(normal)
+	if is_moving:
+		var collision = move_and_collide(velocity * delta * horse_speed)
+		if collision:
+			var normal = collision.get_normal()
+			velocity = velocity.bounce(normal)
+	else:
+		velocity = Vector2.ZERO
 	
 	if velocity.length() > 0:
 		if abs(velocity.y) <= velocity.x:
@@ -37,3 +41,13 @@ func _physics_process(delta: float) -> void:
 		horse_sprite.play("idle_right")
 	
 	#linear_velocity = velocity*horse_speed*delta
+	
+func disable_collisions() -> void:
+	for child in get_children():
+		if child is CollisionShape2D:
+			child.call_deferred("set_disabled", true)
+
+func stop_moving():
+	is_moving = false
+	disable_collisions()
+	modulate.a = 0.5 #Makes the horse transparent
