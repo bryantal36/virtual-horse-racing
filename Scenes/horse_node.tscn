@@ -289,17 +289,15 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_74u3t"]
 
-[node name="HorseNode" type="Node2D"]
-
-[node name="HorseBody" type="CharacterBody2D" parent="."]
+[node name="HorseBody" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_sedhx")
 
-[node name="HorseSprite" type="AnimatedSprite2D" parent="HorseBody"]
+[node name="HorseSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_prx70")
-animation = &"gallop_up"
+animation = &"gallop_down"
 autoplay = "idle_right"
 
-[node name="Collision" type="CollisionShape2D" parent="HorseBody"]
+[node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2(0, 11)
 shape = SubResource("CircleShape2D_74u3t")

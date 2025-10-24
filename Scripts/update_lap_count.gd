@@ -1,8 +1,7 @@
 extends Area2D
 
-#@onready var global_manager = get_node("/root/GlobalManager")
-
 func _on_body_entered(body):
-	if body.name == "HorseBody" and body.has_method("stop_moving"):
+	print(body.name, " crossed the line")
+	if body.has_method("stop_moving"): #This could be cleaner by using groups, but it works for now
 		body.stop_moving()
 		GlobalManager.end_race()

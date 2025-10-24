@@ -2,7 +2,9 @@ extends CharacterBody2D
 
 @onready var horse_sprite: AnimatedSprite2D = $"HorseSprite"
 
-var horse_speed = 110
+@export var horse_name: String = "Name Placeholder"
+@export var horse_color: Color = Color(1, 1, 1)
+@export var horse_speed: float = 110
 var is_moving: bool = true
 
 func _init() -> void:
@@ -12,12 +14,15 @@ func _init() -> void:
 	horse_speed = randi_range(90, 140)
 	
 	# Random horse color. This just adjusts the hue and is temporary until replaced.
-	var red = randf_range(0,1)
-	var green = randf_range(0,1)
-	var blue = randf_range(0,1)
-	modulate.r = red
-	modulate.g = green
-	modulate.b = blue
+	#var red = randf_range(0,1)
+	#var green = randf_range(0,1)
+	#var blue = randf_range(0,1)
+	#modulate.r = red
+	#modulate.g = green
+	#modulate.b = blue
+	
+func _ready() -> void:
+	horse_sprite.modulate = horse_color
 
 func _physics_process(delta: float) -> void:
 	if is_moving:

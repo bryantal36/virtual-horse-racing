@@ -148,12 +148,15 @@ zoom = Vector2(1.125, 1.125)
 
 [node name="HorseNode2" parent="Horses" instance=ExtResource("8_wjs4o")]
 position = Vector2(-108, -212)
+horse_color = Color(0.039215688, 0.45882353, 0.6784314, 1)
 
 [node name="HorseNode" parent="Horses" instance=ExtResource("8_wjs4o")]
 position = Vector2(-75, -187)
+horse_color = Color(1, 0, 0, 1)
 
 [node name="HorseNode3" parent="Horses" instance=ExtResource("8_wjs4o")]
 position = Vector2(-131, -164)
+horse_color = Color(0.61812335, 0.00029427142, 0.62153244, 1)
 
 [node name="HorseNode4" parent="Horses" instance=ExtResource("8_wjs4o")]
 position = Vector2(46, -167)
@@ -163,6 +166,7 @@ position = Vector2(38, -125)
 
 [node name="HorseNode6" parent="Horses" instance=ExtResource("8_wjs4o")]
 position = Vector2(-2, -166)
+horse_color = Color(0.8745098, 0.42745098, 0.6, 1)
 
 [node name="InvisibleWalls" type="Node2D" parent="."]
 
