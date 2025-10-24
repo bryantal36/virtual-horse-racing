@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://r8dxv77qktwv"]
+[gd_scene load_steps=14 format=3 uid="uid://r8dxv77qktwv"]
 
 [ext_resource type="Script" uid="uid://fsci0m7jmnfy" path="res://Scripts/admin.gd" id="1_mc1i1"]
 [ext_resource type="PackedScene" uid="uid://bfloro2vrs0bt" path="res://Scenes/Environment/background.tscn" id="1_oder3"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cvgton8l0gt0v" path="res://Scenes/Environment/invisible_wall.tscn" id="11_qs7lm"]
 [ext_resource type="PackedScene" uid="uid://b37hye4ucsclh" path="res://Scenes/Environment/starting_line.tscn" id="11_xnfqo"]
 [ext_resource type="PackedScene" uid="uid://3a3fj4vik2fi" path="res://Scenes/banner.tscn" id="12_qs7lm"]
+[ext_resource type="Script" uid="uid://bc3jf7nwm7lxy" path="res://Levels/race_ui.gd" id="13_kumpi"]
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_mc1i1")
@@ -229,6 +230,51 @@ rotation = 3.1415927
 position = Vector2(-364, 119)
 rotation = 6.2831855
 
-[node name="Banner" parent="InvisibleWalls" instance=ExtResource("12_qs7lm")]
+[node name="Banner" parent="." instance=ExtResource("12_qs7lm")]
 position = Vector2(-8, 300)
 scale = Vector2(2, 2)
+
+[node name="RaceUI" type="Control" parent="Banner"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -298.5
+offset_top = -30.0
+offset_right = 300.0
+offset_bottom = 30.0
+script = ExtResource("13_kumpi")
+
+[node name="FirstPlace" type="Label" parent="Banner/RaceUI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.094000004
+anchor_top = 0.25800002
+anchor_right = 0.16100001
+anchor_bottom = 0.642
+offset_left = 0.24099731
+offset_top = 0.01999855
+offset_right = 0.14149475
+offset_bottom = -0.020000458
+
+[node name="SecondPlace" type="Label" parent="Banner/RaceUI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.42100003
+anchor_top = 0.25800002
+anchor_right = 0.48800004
+anchor_bottom = 0.642
+offset_left = 0.03147888
+offset_top = 0.01999855
+offset_right = -0.06802368
+offset_bottom = -0.020000458
+
+[node name="ThirdPlace" type="Label" parent="Banner/RaceUI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.675
+anchor_top = 0.25800002
+anchor_right = 0.753
+anchor_bottom = 0.642
+offset_left = 0.012481689
+offset_top = 0.01999855
+offset_right = -0.17050171
+offset_bottom = -0.020000458
