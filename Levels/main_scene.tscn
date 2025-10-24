@@ -148,24 +148,32 @@ zoom = Vector2(1.125, 1.125)
 
 [node name="HorseNode2" parent="Horses" instance=ExtResource("8_wjs4o")]
 position = Vector2(-108, -212)
-horse_color = Color(0.039215688, 0.45882353, 0.6784314, 1)
+horse_name = "Aquarium Contrarian"
+horse_color = Color(0, 1, 0.91764706, 1)
 
 [node name="HorseNode" parent="Horses" instance=ExtResource("8_wjs4o")]
 position = Vector2(-75, -187)
-horse_color = Color(1, 0, 0, 1)
+horse_name = "Boomer Flash"
+horse_color = Color(0.8901961, 0.14901961, 0.21176471, 1)
 
 [node name="HorseNode3" parent="Horses" instance=ExtResource("8_wjs4o")]
 position = Vector2(-131, -164)
-horse_color = Color(0.61812335, 0.00029427142, 0.62153244, 1)
+horse_name = "Violet Haven"
+horse_color = Color(0.49019608, 0.52156866, 0.7529412, 1)
 
 [node name="HorseNode4" parent="Horses" instance=ExtResource("8_wjs4o")]
 position = Vector2(46, -167)
+horse_name = "Carnivorous Cheese"
+horse_color = Color(1, 0.64705884, 0, 1)
 
 [node name="HorseNode5" parent="Horses" instance=ExtResource("8_wjs4o")]
 position = Vector2(38, -125)
+horse_name = "Ceaseless Edge"
+horse_color = Color(0.08627451, 0.07450981, 0.078431375, 1)
 
 [node name="HorseNode6" parent="Horses" instance=ExtResource("8_wjs4o")]
 position = Vector2(-2, -166)
+horse_name = "Delta Queen"
 horse_color = Color(0.8745098, 0.42745098, 0.6, 1)
 
 [node name="InvisibleWalls" type="Node2D" parent="."]
