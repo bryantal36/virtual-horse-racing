@@ -10,8 +10,8 @@ func _ready():
 
 func _update_positions(order: Array):
 	if order.size() >= 1:
-		first_label.text = "1st: " + order[0]
+		first_label.text = "1st: " + order[0].name
 	if order.size() >= 2:
-		second_label.text = "2nd: " + order[1]
+		second_label.text = "2nd: " + order[1].name
 	if order.size() >= 3:
-		third_label.text = "3rd: " + order[2]
+		third_label.text = "3rd: " + order[2].name

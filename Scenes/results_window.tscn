@@ -19,65 +19,69 @@ offset_right = -1650.8162
 offset_bottom = -991.44006
 script = ExtResource("1_2siik")
 
-[node name="ResultsTitle" type="Label" parent="."]
-layout_mode = 0
-offset_left = -650.0
-offset_top = -970.0
-offset_right = 701.0
-offset_bottom = -790.0
-
-[node name="FirstLabel" type="Label" parent="."]
-layout_mode = 0
-offset_left = -123.0
-offset_top = -637.0
-offset_right = 867.0
-offset_bottom = -162.0
-
-[node name="SecondLabel" type="Label" parent="."]
-layout_mode = 0
-offset_left = -232.0
-offset_top = 38.0
-offset_right = 567.0
-offset_bottom = 328.0
-
-[node name="ThirdLabel" type="Label" parent="."]
-layout_mode = 0
-offset_left = -250.0
-offset_top = 490.0
-offset_right = 549.0
-offset_bottom = 780.0
-
 [node name="WoodenWindow01" type="Sprite2D" parent="."]
 position = Vector2(1, 0)
 scale = Vector2(4, 4)
 texture = ExtResource("1_rxrn7")
 
 [node name="FirstPlaceHorse" type="Sprite2D" parent="."]
-position = Vector2(-538.32, -465.72003)
+position = Vector2(-784.3202, -465.7201)
 scale = Vector2(9.915, 9.915)
 texture = ExtResource("2_h0k7u")
 
 [node name="SecondPlaceHorse" type="Sprite2D" parent="."]
-position = Vector2(-549.8925, 127.399994)
+position = Vector2(-795.8926, 127.400024)
 scale = Vector2(5.7, 5.7)
 texture = ExtResource("2_h0k7u")
 
 [node name="ThirdPlaceHorse" type="Sprite2D" parent="."]
-position = Vector2(-528.135, 574.4)
+position = Vector2(-774.135, 574.4)
 scale = Vector2(5.7, 5.7)
 texture = ExtResource("2_h0k7u")
 
 [node name="FirstTrophy" type="Sprite2D" parent="."]
-position = Vector2(-1058.32, -404.71997)
+position = Vector2(-1304.3202, -404.71997)
 scale = Vector2(2.32, 2.32)
 texture = ExtResource("3_2siik")
 
 [node name="SecondTrophy" type="Sprite2D" parent="."]
-position = Vector2(-873.8925, 145.40005)
+position = Vector2(-1119.8926, 145.40002)
 scale = Vector2(1.495, 1.495)
 texture = ExtResource("4_fnmyy")
 
 [node name="ThirdTrophy" type="Sprite2D" parent="."]
-position = Vector2(-868.135, 612.4)
+position = Vector2(-1114.135, 612.4)
 scale = Vector2(1.495, 1.495)
 texture = ExtResource("5_38kom")
+
+[node name="ResultsTitle" type="Label" parent="."]
+layout_mode = 0
+offset_left = -650.0
+offset_top = -970.0
+offset_right = 701.0
+offset_bottom = -790.0
+theme_override_font_sizes/font_size = 131
+
+[node name="FirstLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = -369.0
+offset_top = -637.0
+offset_right = 621.0
+offset_bottom = -162.0
+theme_override_font_sizes/font_size = 320
+
+[node name="SecondLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = -478.0
+offset_top = 38.0
+offset_right = 321.0
+offset_bottom = 328.0
+theme_override_font_sizes/font_size = 211
+
+[node name="ThirdLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = -496.0
+offset_top = 490.0
+offset_right = 303.0
+offset_bottom = 780.0
+theme_override_font_sizes/font_size = 211
