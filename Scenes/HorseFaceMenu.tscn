@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://jss3n4hfspvy"]
+
+[ext_resource type="Texture2D" uid="uid://b5vnqxcq3gvcp" path="res://Assets/Custom/HorseFaceWhite-removebg-preview.png" id="1_j2wod"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="HorseFaceWhiteRemovebgPreview" type="Sprite2D" parent="."]
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("1_j2wod")

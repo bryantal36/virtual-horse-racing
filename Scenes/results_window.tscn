@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=3 uid="uid://dr80xaun1gn0f"]
+
+[ext_resource type="Script" uid="uid://m075yjt0yh4b" path="res://Scripts/results_window.gd" id="1_2siik"]
+[ext_resource type="Texture2D" uid="uid://btt06g8tp2x3x" path="res://Assets/Menu/Wooden-Window-01.png" id="1_rxrn7"]
+[ext_resource type="Texture2D" uid="uid://b5vnqxcq3gvcp" path="res://Assets/Custom/HorseFaceWhite-removebg-preview.png" id="2_h0k7u"]
+[ext_resource type="Texture2D" uid="uid://b3devvvvp0fl4" path="res://Assets/Custom/first_trophy.png" id="3_2siik"]
+[ext_resource type="Texture2D" uid="uid://b6muh3174gm76" path="res://Assets/Custom/second_trophy.png" id="4_fnmyy"]
+[ext_resource type="Texture2D" uid="uid://7gru8ixblbka" path="res://Assets/Custom/third_trophy.png" id="5_38kom"]
+
+[node name="ResultsWindow" type="Control"]
+layout_mode = 3
+anchor_left = -1.4130001
+anchor_top = -1.5530001
+anchor_right = 1.4330001
+anchor_bottom = 1.5300001
+offset_left = 1627.7761
+offset_top = 1006.34406
+offset_right = -1650.8162
+offset_bottom = -991.44006
+script = ExtResource("1_2siik")
+
+[node name="ResultsTitle" type="Label" parent="."]
+layout_mode = 0
+offset_left = -650.0
+offset_top = -970.0
+offset_right = 701.0
+offset_bottom = -790.0
+
+[node name="FirstLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = -123.0
+offset_top = -637.0
+offset_right = 867.0
+offset_bottom = -162.0
+
+[node name="SecondLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = -232.0
+offset_top = 38.0
+offset_right = 567.0
+offset_bottom = 328.0
+
+[node name="ThirdLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = -250.0
+offset_top = 490.0
+offset_right = 549.0
+offset_bottom = 780.0
+
+[node name="WoodenWindow01" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+scale = Vector2(4, 4)
+texture = ExtResource("1_rxrn7")
+
+[node name="FirstPlaceHorse" type="Sprite2D" parent="."]
+position = Vector2(-538.32, -465.72003)
+scale = Vector2(9.915, 9.915)
+texture = ExtResource("2_h0k7u")
+
+[node name="SecondPlaceHorse" type="Sprite2D" parent="."]
+position = Vector2(-549.8925, 127.399994)
+scale = Vector2(5.7, 5.7)
+texture = ExtResource("2_h0k7u")
+
+[node name="ThirdPlaceHorse" type="Sprite2D" parent="."]
+position = Vector2(-528.135, 574.4)
+scale = Vector2(5.7, 5.7)
+texture = ExtResource("2_h0k7u")
+
+[node name="FirstTrophy" type="Sprite2D" parent="."]
+position = Vector2(-1058.32, -404.71997)
+scale = Vector2(2.32, 2.32)
+texture = ExtResource("3_2siik")
+
+[node name="SecondTrophy" type="Sprite2D" parent="."]
+position = Vector2(-873.8925, 145.40005)
+scale = Vector2(1.495, 1.495)
+texture = ExtResource("4_fnmyy")
+
+[node name="ThirdTrophy" type="Sprite2D" parent="."]
+position = Vector2(-868.135, 612.4)
+scale = Vector2(1.495, 1.495)
+texture = ExtResource("5_38kom")
