@@ -5,6 +5,9 @@ extends CharacterBody2D
 @export var horse_name: String = "Name Placeholder"
 @export var horse_color: Color = Color(1, 1, 1)
 @export var horse_speed: float = 110
+
+# The starting position is set when the race is generated. 0 is a place holder.
+var horse_starting_pos = 0
 var is_moving: bool = true
 
 func _init() -> void:

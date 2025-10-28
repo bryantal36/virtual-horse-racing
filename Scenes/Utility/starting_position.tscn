@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqm5qlg3dlls"]
+
+[ext_resource type="Script" uid="uid://bkw6to2mu67ul" path="res://Scripts/Race Start/starting_position.gd" id="1_nco04"]
+
+[node name="StartingPosition" type="Node2D"]
+script = ExtResource("1_nco04")

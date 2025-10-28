@@ -1,0 +1,189 @@
+[gd_scene load_steps=7 format=3 uid="uid://b3lpjhioj785t"]
+
+[ext_resource type="Texture2D" uid="uid://btt06g8tp2x3x" path="res://Assets/Menu/Wooden-Window-01.png" id="1_g4l7a"]
+[ext_resource type="Script" uid="uid://dvn52fuot0gqc" path="res://Scripts/UI/betting_screen.gd" id="1_gwvvn"]
+[ext_resource type="PackedScene" uid="uid://jss3n4hfspvy" path="res://Scenes/HorseFaceMenu.tscn" id="3_412qt"]
+[ext_resource type="Texture2D" uid="uid://bgd83tlfgsttn" path="res://Assets/Custom/Bet.png" id="4_owv4j"]
+[ext_resource type="Texture2D" uid="uid://c1f2jwawhucxm" path="res://Assets/Custom/BetPush.png" id="5_3thy2"]
+[ext_resource type="Texture2D" uid="uid://3i40e2xcp2bf" path="res://Assets/Custom/BetSelect.png" id="6_pn6jk"]
+
+[node name="BettingScreen" type="Control"]
+layout_mode = 3
+anchor_right = 1.1240001
+anchor_bottom = 1.4540001
+offset_right = 0.15185547
+offset_bottom = -0.19207764
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gwvvn")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_right = 1271.0
+offset_bottom = 955.0
+texture = ExtResource("1_g4l7a")
+
+[node name="Horses" type="Node2D" parent="."]
+
+[node name="Horse1" parent="Horses" instance=ExtResource("3_412qt")]
+position = Vector2(302, 323)
+
+[node name="Horse2" parent="Horses" instance=ExtResource("3_412qt")]
+position = Vector2(300, 478)
+
+[node name="Horse3" parent="Horses" instance=ExtResource("3_412qt")]
+position = Vector2(308, 646)
+
+[node name="Horse4" parent="Horses" instance=ExtResource("3_412qt")]
+position = Vector2(640, 317)
+
+[node name="Horse5" parent="Horses" instance=ExtResource("3_412qt")]
+position = Vector2(636, 478)
+
+[node name="Horse6" parent="Horses" instance=ExtResource("3_412qt")]
+position = Vector2(638, 647)
+
+[node name="HorseNames" type="Node2D" parent="."]
+
+[node name="HorseName1" type="Label" parent="HorseNames"]
+offset_left = 356.0
+offset_top = 293.0
+offset_right = 467.0
+offset_bottom = 316.0
+text = "Aquarium Equestrian"
+
+[node name="HorseName2" type="Label" parent="HorseNames"]
+offset_left = 357.0
+offset_top = 453.0
+offset_right = 397.0
+offset_bottom = 476.0
+text = "Aquarium Equestrian"
+
+[node name="HorseName3" type="Label" parent="HorseNames"]
+offset_left = 365.0
+offset_top = 622.0
+offset_right = 530.0
+offset_bottom = 645.0
+text = "Aquarium Equestrian"
+
+[node name="HorseName4" type="Label" parent="HorseNames"]
+offset_left = 694.0
+offset_top = 291.0
+offset_right = 859.0
+offset_bottom = 314.0
+text = "Aquarium Equestrian"
+
+[node name="HorseName5" type="Label" parent="HorseNames"]
+offset_left = 695.0
+offset_top = 450.0
+offset_right = 860.0
+offset_bottom = 473.0
+text = "Aquarium Equestrian"
+
+[node name="HorseName6" type="Label" parent="HorseNames"]
+offset_left = 693.0
+offset_top = 620.0
+offset_right = 858.0
+offset_bottom = 643.0
+text = "Aquarium Equestrian"
+
+[node name="HorseOdds" type="Node2D" parent="."]
+
+[node name="Odds1" type="Label" parent="HorseOdds"]
+offset_left = 414.0
+offset_top = 324.0
+offset_right = 457.0
+offset_bottom = 347.0
+text = "1 to 5"
+
+[node name="Odds2" type="Label" parent="HorseOdds"]
+offset_left = 415.0
+offset_top = 478.0
+offset_right = 458.0
+offset_bottom = 501.0
+text = "1 to 5"
+
+[node name="Odds3" type="Label" parent="HorseOdds"]
+offset_left = 417.0
+offset_top = 650.0
+offset_right = 460.0
+offset_bottom = 673.0
+text = "1 to 5"
+
+[node name="Odds4" type="Label" parent="HorseOdds"]
+offset_left = 749.0
+offset_top = 317.0
+offset_right = 792.0
+offset_bottom = 340.0
+text = "1 to 5"
+
+[node name="Odds5" type="Label" parent="HorseOdds"]
+offset_left = 750.0
+offset_top = 478.0
+offset_right = 793.0
+offset_bottom = 501.0
+text = "1 to 5"
+
+[node name="Odds6" type="Label" parent="HorseOdds"]
+offset_left = 752.0
+offset_top = 649.0
+offset_right = 795.0
+offset_bottom = 672.0
+text = "1 to 5"
+
+[node name="BetButtons" type="Node2D" parent="."]
+
+[node name="Bet1" type="TextureButton" parent="BetButtons"]
+offset_left = 362.0
+offset_top = 361.0
+offset_right = 512.0
+offset_bottom = 411.0
+texture_normal = ExtResource("4_owv4j")
+texture_pressed = ExtResource("5_3thy2")
+texture_hover = ExtResource("6_pn6jk")
+
+[node name="Bet2" type="TextureButton" parent="BetButtons"]
+offset_left = 362.0
+offset_top = 510.0
+offset_right = 512.0
+offset_bottom = 560.0
+texture_normal = ExtResource("4_owv4j")
+texture_pressed = ExtResource("5_3thy2")
+texture_hover = ExtResource("6_pn6jk")
+
+[node name="Bet3" type="TextureButton" parent="BetButtons"]
+offset_left = 365.0
+offset_top = 680.0
+offset_right = 515.0
+offset_bottom = 730.0
+texture_normal = ExtResource("4_owv4j")
+texture_pressed = ExtResource("5_3thy2")
+texture_hover = ExtResource("6_pn6jk")
+
+[node name="Bet4" type="TextureButton" parent="BetButtons"]
+offset_left = 699.0
+offset_top = 354.0
+offset_right = 849.0
+offset_bottom = 404.0
+texture_normal = ExtResource("4_owv4j")
+texture_pressed = ExtResource("5_3thy2")
+texture_hover = ExtResource("6_pn6jk")
+
+[node name="Bet5" type="TextureButton" parent="BetButtons"]
+offset_left = 697.0
+offset_top = 512.0
+offset_right = 847.0
+offset_bottom = 562.0
+texture_normal = ExtResource("4_owv4j")
+texture_pressed = ExtResource("5_3thy2")
+texture_hover = ExtResource("6_pn6jk")
+
+[node name="Bet6" type="TextureButton" parent="BetButtons"]
+offset_left = 700.0
+offset_top = 681.0
+offset_right = 850.0
+offset_bottom = 731.0
+texture_normal = ExtResource("4_owv4j")
+texture_pressed = ExtResource("5_3thy2")
+texture_hover = ExtResource("6_pn6jk")
