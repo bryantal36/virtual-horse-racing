@@ -26,6 +26,7 @@ func _init() -> void:
 	
 func _ready() -> void:
 	horse_sprite.modulate = horse_color
+	GlobalManager.connect("end_race", Callable(self, "_on_end_race"))
 
 func _physics_process(delta: float) -> void:
 	if is_moving:
@@ -59,3 +60,6 @@ func stop_moving():
 	is_moving = false
 	disable_collisions()
 	modulate.a = 0.5 #Makes the horse transparent
+	
+func _on_end_race():
+	stop_moving()

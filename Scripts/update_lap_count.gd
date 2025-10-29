@@ -5,4 +5,3 @@ func _on_body_entered(body):
 		body.stop_moving()
 		#print(body.horse_name, " crossed the line")
 		GlobalManager.generate_placements(body.horse_name, body.horse_color)
-		GlobalManager.end_race()

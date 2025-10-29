@@ -4,6 +4,7 @@ var current_lap: int = 0
 var finish_order: Array = []
 
 signal race_positions_updated
+signal end_race
 
 func generate_placements(horse_name: String, horse_color: Color):
 	for horse_data in finish_order:
@@ -14,5 +15,5 @@ func generate_placements(horse_name: String, horse_color: Color):
 		
 	emit_signal("race_positions_updated", finish_order)
 
-func end_race():
-	print("The Race is OVER!")
+	if finish_order.size() >= 3:
+		emit_signal("end_race")
