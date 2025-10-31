@@ -6,6 +6,8 @@ var finish_order: Array = []
 signal race_positions_updated
 signal end_race
 
+# Adds the horse details to a dictionary to be passed to the betting UI
+
 func generate_placements(horse_name: String, horse_color: Color):
 	for horse_data in finish_order:
 		if horse_data.name == horse_name:

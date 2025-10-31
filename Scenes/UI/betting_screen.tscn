@@ -51,7 +51,7 @@ offset_left = 356.0
 offset_top = 293.0
 offset_right = 467.0
 offset_bottom = 316.0
-text = "Aquarium Equestrian"
+text = "Aquarium Contrarian"
 
 [node name="HorseName2" type="Label" parent="HorseNames"]
 offset_left = 357.0

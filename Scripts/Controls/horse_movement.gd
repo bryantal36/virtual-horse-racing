@@ -60,6 +60,6 @@ func stop_moving():
 	is_moving = false
 	disable_collisions()
 	modulate.a = 0.5 #Makes the horse transparent
-	
+
 func _on_end_race():
 	stop_moving()

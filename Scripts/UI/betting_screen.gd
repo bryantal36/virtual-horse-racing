@@ -4,6 +4,7 @@ extends Control
 
 var horse_value_master = []
 var horse_placement = []
+var horse_dict = {}
 
 # Retrieve the node group with all the horse names
 @onready var horse_names: Node2D = $HorseNames
@@ -16,6 +17,9 @@ var horse_faces_master = []
 # And once more for the horse odds
 @onready var horse_odds: Node2D = $HorseOdds
 var horse_odds_master = []
+
+func _ready():
+	self.visible = true
 
 # We need to call this function after the MainScene loads, so the call for this
 # function is found in _ready in the admin script.
@@ -30,6 +34,7 @@ func update_display():
 	
 	# Populate the horse odds array
 	for i in horse_odds.get_child_count():
+		print("Right here: ", horse_odds.get_child(i))
 		horse_odds_master.append(horse_odds.get_child(i))
 	
 	var slot = 0
@@ -48,6 +53,7 @@ func update_display():
 	
 	# We need to retrieve the SP and speed for each horse.
 	for i in main.horses_master:
+		print(i.horse_name)
 		var horse_value = 0
 		horse_value += i.horse_speed
 		if i.horse_starting_pos <= 2:
@@ -56,7 +62,13 @@ func update_display():
 			horse_value += 25
 		else:
 			horse_value -= 50
+		horse_dict[i.horse_name] = horse_value
+		print(horse_dict)
 		horse_value_master.append(horse_value)
+		horse_value_master.sort() #sorts it only in ascending mode, so reverse the list on the next line
+		horse_value_master.reverse()
+		print(horse_value_master)
+		
 	
 	for i in horse_value_master:
 		var temp = 0
