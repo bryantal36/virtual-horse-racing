@@ -62,8 +62,9 @@ func update_display():
 			horse_value += 25
 		else:
 			horse_value -= 50
-		horse_dict[i.horse_name] = horse_value
+		horse_dict[i.horse_name] = horse_value # Check this out, this may be a cleaner way to populate the window
 		print(horse_dict)
+		
 		horse_value_master.append(horse_value)
 		horse_value_master.sort() #sorts it only in ascending mode, so reverse the list on the next line
 		horse_value_master.reverse()
