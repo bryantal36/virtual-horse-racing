@@ -19,7 +19,7 @@ var horse_faces_master = []
 var horse_odds_master = []
 
 func _ready():
-	self.visible = true
+	pass
 
 # We need to call this function after the MainScene loads, so the call for this
 # function is found in _ready in the admin script.
@@ -34,13 +34,13 @@ func update_display():
 	
 	# Populate the horse odds array
 	for i in horse_odds.get_child_count():
-		print("Right here: ", horse_odds.get_child(i))
+		#print("Right here: ", horse_odds.get_child(i))
 		horse_odds_master.append(horse_odds.get_child(i))
 	
 	var slot = 0
 	for i in horse_names_master:
-		# i in this context is the physical node, and isn't an integer. Thus
-		# we use var slot to accomplish the goal we need.
+		### i in this context is the physical node, and isn't an integer. Thus
+		### we use var slot to accomplish the goal we need.
 		i.text = main.horses_master[slot].horse_name
 		slot += 1
 	
@@ -48,12 +48,11 @@ func update_display():
 	for i in horse_faces_master:
 		i.modulate = main.horses_master[slot1].horse_color
 		slot1 += 1
+
+	### Everything below is used for calculating the odds of a horse.
 	
-	# Everything below is used for calculating the odds of a horse.
-	
-	# We need to retrieve the SP and speed for each horse.
+	### We need to retrieve the SP and speed for each horse.
 	for i in main.horses_master:
-		print(i.horse_name)
 		var horse_value = 0
 		horse_value += i.horse_speed
 		if i.horse_starting_pos <= 2:
@@ -63,20 +62,33 @@ func update_display():
 		else:
 			horse_value -= 50
 		horse_dict[i.horse_name] = horse_value # Check this out, this may be a cleaner way to populate the window
-		print(horse_dict)
-		
+		### This does seem like it could be useful. I looked into dictionaries some,
+		### however I am unsure on how to go about referencing the data inside the dictionary.
 		horse_value_master.append(horse_value)
-		horse_value_master.sort() #sorts it only in ascending mode, so reverse the list on the next line
-		horse_value_master.reverse()
-		print(horse_value_master)
-		
-	
+		### Can't have it sort, as the positional value in the array corresponds
+		### to which horse the value is for.
+		#horse_value_master.sort()
+
+	### Moved this outside so it only prints once, after completion.
+	#print(horse_dict)
+
+	### This simplifies the odds into one integer
 	for i in horse_value_master:
 		var temp = 0
 		var placement = 0
 		for x in horse_value_master:
-			if i > x:
+			if i >= x:
 				placement += 1
 		horse_placement.append(placement)
 		temp += 1
-		print(horse_placement)
+	#print(horse_placement)
+	
+	var slot2 = 0
+	for i in horse_odds_master:
+		i.text = str(horse_placement[slot2])
+		slot2 += 1
+	
+	var slot3 = 0
+	for i in main.horses_master:
+		i.horse_odd_temp = horse_placement[slot3]
+		slot3 += 1

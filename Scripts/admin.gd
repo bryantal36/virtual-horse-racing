@@ -26,7 +26,7 @@ func _ready() -> void:
 	
 	# Now we plug all of the horses into one array, without having to reference
 	# them individually.
-	get_tree().paused = true
+	#get_tree().paused = true
 	for i in horses.get_child_count():
 		horses_master.append(horses.get_child(i))
 	

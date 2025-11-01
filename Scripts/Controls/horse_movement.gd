@@ -9,6 +9,7 @@ extends CharacterBody2D
 # The starting position is set when the race is generated. 0 is a place holder.
 var horse_starting_pos = 0
 var is_moving: bool = true
+var horse_odd_temp = 0
 
 func _init() -> void:
 	var random_y_vector = randf_range(-1, 1)
